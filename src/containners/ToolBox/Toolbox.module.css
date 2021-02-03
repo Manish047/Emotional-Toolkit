@@ -1,0 +1,92 @@
+.ToolBoxPage {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Title {
+    margin: 16px;
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow: auto;
+    padding: 8px;
+}
+
+.ActivityBox {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    margin: 0px;
+}
+
+.ToolBox {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    bottom: 5%;
+    width: 80%;
+    height: 30%;
+    max-height: 100px;
+    min-width: 175px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ToolBox img {
+    height: 100%;
+    width: 100%;
+}
+
+@media(min-width: 400px) {
+    .ToolBox {
+        min-width: 225px;
+        max-height: 100px;
+    }
+    .Content {
+        padding: 8px;
+    }
+}
+
+@media(min-width: 600px) {
+    .ToolBox {
+        min-width: 225px;
+        max-height: 125px;
+    }
+    .Content {
+        padding: 16px;
+    }
+}
+
+@media(min-width: 800px) {
+    .ToolBox {
+        min-width: 250px;
+    }
+    .Content {
+        padding: 32px;
+    }
+}
+
+@media(min-width: 1000px) {
+    .ToolBox {
+        min-width: 275px;
+    }
+    .Content {
+        padding: 48 px;
+    }
+}

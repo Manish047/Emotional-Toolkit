@@ -1,0 +1,68 @@
+.Activity {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Content {
+    height: auto;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    padding: 4px;
+}
+
+.AvtivityImage {
+    height: 100px;
+    width: 100px;
+}
+
+.ActivityImage img {
+    height: 100%;
+    width: 100%
+}
+
+.ActivityTitle {
+    font-size: 0.6rem;
+    white-space: nowrap;
+}
+
+@media(min-width: 400px) {
+    .Content {
+        width: 75px;
+    }
+    .ActivityTitle {
+        font-size: 0.7rem;
+    }
+}
+
+@media(min-width: 600px) {
+    .Content {
+        width: 100px;
+    }
+    .ActivityTitle {
+        font-size: 0.8rem;
+        ;
+    }
+}
+
+@media(min-width: 800px) {
+    .Content {
+        width: 125px;
+    }
+    .ActivityTitle {
+        font-size: 1rem;
+        ;
+    }
+}
+
+@media(min-width: 1000px) and (min-height: 800px) {
+    .Content {
+        width: 125px;
+    }
+    .ActivityTitle {
+        font-size: 1rem;
+    }
+}

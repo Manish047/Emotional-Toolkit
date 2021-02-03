@@ -1,0 +1,82 @@
+.Input {
+    margin: 4px;
+    width: 150px;
+    padding: 16px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #eee;
+    background-color: white;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.NoDraggableArea {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Input input {
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.Input button {
+    display: inline-block;
+    background-color: transparent;
+    color: red;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(0%);
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.Input button:disabled {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.Input input:focus {
+    border: none
+}
+
+@media(min-width: 400px) {
+    .Input input {
+        font-size: 0.7rem;
+    }
+}
+
+@media(min-width: 600px) {
+    .Input {
+        width: 175px;
+    }
+    .Input input {
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width: 800px) {
+    .Input {
+        width: 200px;
+    }
+    .Input input {
+        font-size: 0.8rem;
+    }
+}
+
+@media(min-width: 1000px) {
+    .Input input {
+        font-size: 1rem;
+    }
+}
