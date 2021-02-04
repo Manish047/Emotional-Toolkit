@@ -95,11 +95,6 @@ class ToolBox extends Component {
         window.removeEventListener('resize', this.setToolBoxDeltaPoints);
     }
 
-    // Won't br required
-    componentDidUpdate() {
-        console.log(this.state.selectedActivities)
-    }
-
     render() {
         let activities = this.state.allActivities.map((activity, index) => {
             return <Activity

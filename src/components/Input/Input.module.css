@@ -18,20 +18,6 @@
     padding: 16px 8px;
 }
 
-.Hint {
-    transform: translateY(100%);
-    opacity: 0;
-    margin: 0 6px;
-    text-align: left;
-    font-size: 0.7rem;
-    transition: all 0.3s ease-in;
-}
-
-.Content:hover .Hint {
-    transform: translateY(0%);
-    opacity: 1;
-}
-
 .NoDraggableArea strong {
     display: flex;
     flex-direction: row;
