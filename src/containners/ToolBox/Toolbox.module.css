@@ -222,6 +222,11 @@
     .ActivityBox div:nth-child(7) {
         right: 20%;
     }
+    /* Rescue */
+    .ActivityBox div:nth-child(6) {
+        top: 15%;
+        right: 2%;
+    }
     .ActivityBox div:nth-child(12) {
         top: 65%;
         right: 5%
