@@ -1,6 +1,7 @@
-# Emotional Toolkit React Component
+# Emotional Toolkit React App
 
-This Component was designed for an ongoing project which lets user to select any 5 emotional activities they prefer to do.
+The component was designed for an ongoing project which lets user to select any 5 emotional activities they prefer to do.<br>
+The 'activities' are made draggabe using react-draggable library.
 
 ## A few Screen Shots...
 
