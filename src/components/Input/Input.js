@@ -14,10 +14,6 @@ class Input extends Component {
             y: 0,
             height: 0,
             width: 0,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0
         },
     }
 
@@ -75,21 +71,23 @@ class Input extends Component {
 
     render() {
         return (
-            <>
-                <Draggable
-                    cancel="strong"
-                    onStart={this.onDragStart}
-                    onDrag={this.setInputDeltaPoints}
-                    onStop={this.onDragStop}
-                >
+            <Draggable
+                cancel="strong"
+                onStart={this.onDragStart}
+                onDrag={this.setInputDeltaPoints}
+                onStop={this.onDragStop}
+            >
+                <div className={classes.Content}>
                     <div className={classes.Input} ref={ref => this.inputElRef = ref} style={{ ...this.props.position }}>
                         <div className={classes.NoDraggableArea}>
-                            <strong><input ref={ref => this.inputRef = ref} onChange={this.inputChangeHandler} value={this.state.value} placeholder="Create your own!" /></strong>
-                            <strong><button disabled={!this.state.isValid} onClick={this.cancelActivityHandler}><i className={["fas", "fa-times"].join(' ')}></i></button></strong>
+                            <strong>
+                                <input ref={ref => this.inputRef = ref} onChange={this.inputChangeHandler} value={this.state.value} placeholder="Create your own!" />
+                                <button disabled={!this.state.isValid} onClick={this.cancelActivityHandler}><i className={["fas", "fa-times"].join(' ')}></i></button>
+                            </strong>
                         </div>
                     </div>
-                </Draggable>
-            </>
+                </div>
+            </Draggable>
         );
     }
 }

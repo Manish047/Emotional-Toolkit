@@ -8,7 +8,8 @@
 }
 
 .Title {
-    margin: 16px;
+    margin: 16px 0;
+    font-size: 1.5rem;
 }
 
 .Content {
@@ -16,27 +17,103 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
+    max-width: 1200px;
     flex-wrap: nowrap;
     position: relative;
     overflow: auto;
-    padding: 8px;
 }
 
 .ActivityBox {
-    text-align: center;
     height: 100%;
     width: 100%;
-    overflow: auto;
     margin: 0px;
+    padding: 16px;
+    text-align: center;
+}
+
+/* Grounding */
+
+.ActivityBox div:nth-child(1) {
+    left: 0%
+}
+
+/* BrainStorming */
+
+.ActivityBox div:nth-child(2) {
+    top: 55%;
+    left: 10%
+}
+
+/* Music */
+
+.ActivityBox div:nth-child(3) {
+    top: 22%;
+    left: 12%
+}
+
+/* Meditation */
+
+.ActivityBox div:nth-child(4) {
+    top: 5%;
+    left: 30%
+}
+
+/* Movement */
+
+.ActivityBox div:nth-child(5) {
+    top: 28%;
+    right: 35%;
+}
+
+/* Rescue */
+
+.ActivityBox div:nth-child(6) {
+    top: 22%;
+    right: 2%
+}
+
+/* Journaling */
+
+.ActivityBox div:nth-child(7) {
+    top: 42%;
+    right: 0%
+}
+
+/* Affirmations */
+
+.ActivityBox div:nth-child(8) {
+    top: 45%;
+    right: 30%
+}
+
+/* Comfort */
+
+.ActivityBox div:nth-child(9) {
+    top: 12%;
+    right: 20%
+}
+
+.ActivityBox div:nth-child(10) {
+    top: 0%;
+    right: 0%
+}
+
+.ActivityBox div:nth-child(11) {
+    top: 40%;
+    left: 0%
+}
+
+.ActivityBox div:nth-child(12) {
+    top: 60%;
+    right: 0%
 }
 
 .ToolBox {
     pointer-events: none;
-    position: absolute;
-    z-index: 1;
-    bottom: 5%;
+    position: fixed;
+    bottom: 3%;
     width: 80%;
     height: 30%;
     max-height: 100px;
@@ -58,8 +135,24 @@
         min-width: 225px;
         max-height: 100px;
     }
-    .Content {
-        padding: 8px;
+    .Title {
+        font-size: 1.6rem;
+    }
+}
+
+@media(min-width: 500px) {
+    /* Movement */
+    .ActivityBox div:nth-child(5) {
+        right: 45%;
+    }
+    /* Affirmations */
+    .ActivityBox div:nth-child(8) {
+        right: 35%
+    }
+    /* Comfort */
+    .ActivityBox div:nth-child(9) {
+        top: 15%;
+        right: 25%
     }
 }
 
@@ -68,8 +161,8 @@
         min-width: 225px;
         max-height: 125px;
     }
-    .Content {
-        padding: 16px;
+    .Title {
+        font-size: 1.7rem;
     }
 }
 
@@ -77,8 +170,31 @@
     .ToolBox {
         min-width: 250px;
     }
-    .Content {
-        padding: 32px;
+    .Title {
+        font-size: 1.8rem;
+    }
+    /* Rescue */
+    .ActivityBox div:nth-child(6) {
+        top: 12%;
+    }
+    /* Journaling */
+    .ActivityBox div:nth-child(7) {
+        top: 35%;
+    }
+    /* Affirmations */
+    .ActivityBox div:nth-child(8) {
+        top: 48%
+    }
+    /* BrainStorming */
+    .ActivityBox div:nth-child(2) {
+        top: 60%;
+    }
+    /* Music */
+    .ActivityBox div:nth-child(3) {
+        top: 25%;
+    }
+    .ActivityBox div:nth-child(11) {
+        top: 48%;
     }
 }
 
@@ -86,7 +202,28 @@
     .ToolBox {
         min-width: 275px;
     }
-    .Content {
-        padding: 48 px;
+    .Title {
+        font-size: 2rem;
+    }
+    /* Movement */
+    .ActivityBox div:nth-child(5) {
+        top: 35%;
+        right: 60%;
+    }
+    /* Affirmations */
+    .ActivityBox div:nth-child(8) {
+        right: 40%
+    }
+    /* Comfort */
+    .ActivityBox div:nth-child(9) {
+        right: 35%
+    }
+    /* Journaling */
+    .ActivityBox div:nth-child(7) {
+        right: 20%;
+    }
+    .ActivityBox div:nth-child(12) {
+        top: 65%;
+        right: 5%
     }
 }

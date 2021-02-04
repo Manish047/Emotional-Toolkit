@@ -21,25 +21,21 @@ class ToolBox extends Component {
     state = {
         selectedActivities: [],
         allActivities: [
-            { imageSource: groundingImage, title: "Grounding", /*position: { left: '5%', top: '0%' }*/ },
-            { imageSource: brainstormingImage, title: "Brainstorming", /*position: { left: '7%', top: '65%' } */ },
-            { imageSource: musicImage, title: "Music", /*position: { left: '20%', top: '45%' } */ },
-            { imageSource: meditationImage, title: "Meditation", /*position: { left: '32%', top: '15%' } */ },
-            { imageSource: movementImage, title: "Movement", /*position: { left: '45%', top: '30%' } */ },
-            { imageSource: rescueImage, title: "Rescue", /*position: { right: '32%', top: '15%' } */ },
-            { imageSource: journalImage, title: "Journaling", /*position: { right: '20%', top: '45%' } */ },
-            { imageSource: affirmationsImage, title: "Affirmations", /*position: { right: '7%', top: '65%' } */ },
-            { imageSource: comfortImage, title: "Comfort Objects", /*position: { right: '5%', top: '0%' } */ },
+            { imageSource: groundingImage, title: "Grounding", },
+            { imageSource: brainstormingImage, title: "Brainstorming", },
+            { imageSource: musicImage, title: "Music", },
+            { imageSource: meditationImage, title: "Meditation", },
+            { imageSource: movementImage, title: "Movement", },
+            { imageSource: rescueImage, title: "Rescue", },
+            { imageSource: journalImage, title: "Journaling", },
+            { imageSource: affirmationsImage, title: "Affirmations", },
+            { imageSource: comfortImage, title: "Comfort Objects", },
         ],
         toolBoxDeltaPoints: {
             x: 0,
             y: 0,
             height: 0,
             width: 0,
-            top: 0,
-            left: 0,
-            bottom: 0,
-            right: 0
         },
         itemsToSelect: 5
     }
@@ -56,9 +52,8 @@ class ToolBox extends Component {
         if (name === '') return;
         let diffX = Math.abs(deltaPointsOfItem.x - this.state.toolBoxDeltaPoints.x);
         let diffY = Math.abs(deltaPointsOfItem.y - this.state.toolBoxDeltaPoints.y);
-        console.log(diffX, diffY)
         if (diffY <= (this.state.toolBoxDeltaPoints.height * 2 / 3) &&
-            diffX <= (this.state.toolBoxDeltaPoints.width * 1.5 / 3)) {
+            diffX <= (this.state.toolBoxDeltaPoints.width * 1.2 / 3)) {
             this.selectActivity(name);
         } else {
             this.deSelectActivity(name);
@@ -128,23 +123,21 @@ class ToolBox extends Component {
                             checkItemInBox={this.checkItemInBox}
                             shouldDrag={this.state.itemsToSelect <= 5 && this.state.itemsToSelect > 0}
                             deSelect={this.deSelectActivity}
-                            // position={{ left: "-20%", top: "30%" }}
                         />
                         <Input checkItemInBox={this.checkItemInBox}
                             shouldDrag={this.state.itemsToSelect <= 5 && this.state.itemsToSelect > 0}
                             deSelect={this.deSelectActivity}
-                            // position={{ left: "0%", top: "5%" }}
                         />
                         <Input checkItemInBox={this.checkItemInBox}
                             shouldDrag={this.state.itemsToSelect <= 5 && this.state.itemsToSelect > 0}
                             deSelect={this.deSelectActivity}
-                            // position={{ right: "-20%", top: "30%" }}
                         />
                     </div>
                     <div ref={ref => this.toolboxRef = ref} className={classes.ToolBox}>
                         <img src={toolboxImage} alt="Toolbox" />
                     </div>
                 </div>
+
             </div>
         );
     }

@@ -1,7 +1,11 @@
+.Content {
+    display: inline-block;
+    position: absolute;
+}
+
 .Input {
     margin: 4px;
     width: 150px;
-    padding: 16px 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 2px 2px 2px #eee;
@@ -11,9 +15,24 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 16px 8px;
 }
 
-.NoDraggableArea {
+.Hint {
+    transform: translateY(100%);
+    opacity: 0;
+    margin: 0 6px;
+    text-align: left;
+    font-size: 0.7rem;
+    transition: all 0.3s ease-in;
+}
+
+.Content:hover .Hint {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.NoDraggableArea strong {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
